@@ -1,9 +1,13 @@
 require 'machinist/active_record'
 
-# Add your blueprints here.
-#
-# e.g.
-#   Post.blueprint do
-#     title { "Post #{sn}" }
-#     body  { "Lorem ipsum..." }
-#   end
+User.blueprint do
+  email { 'user@user.com' }
+  name { 'User Souza' }
+end
+
+Transaction.blueprint do
+  user { User.make! }
+  type { TransactionType::IN }
+  value { 19.90 }
+  date { Date.today }
+end

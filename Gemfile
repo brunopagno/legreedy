@@ -22,6 +22,8 @@ gem 'devise', '~> 3.1.1'
 gem 'slim-rails', '~> 2.0.3'
 gem 'bootstrap-sass-rails', '~> 3.0.0.3'
 gem 'simple_form', '~> 3.0.0'
+gem 'inherited_resources'
+gem 'enumerate_it'
 
 group :development do
   gem 'letter_opener', '~> 1.1.2'

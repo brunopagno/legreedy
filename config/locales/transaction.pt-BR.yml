@@ -1,0 +1,13 @@
+pt-BR:
+  activerecord:
+    models:
+      transaction:
+        one: Transação
+        other: Transações
+    attributes:
+      transaction:
+        type: Tipo
+        value: Valor
+        date: Data
+        description: Descrição
+        category: Categoria

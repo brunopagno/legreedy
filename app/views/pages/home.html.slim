@@ -1,2 +1,7 @@
 .container
-  p landing here :)
+  .row
+    .col-xs-8
+      p Lorem ipsum here
+      = link_to 'Experimente o LeGreedy', new_user_registration_path, class: 'btn btn-lg btn-info'
+    .col-xs-4
+      = render partial: 'login_form'
