@@ -4,7 +4,7 @@ describe Transaction do
 
   context 'validations' do
     it { should validate_presence_of :user_id }
-    it { should validate_presence_of :type }
+    it { should validate_presence_of :way }
     it { should validate_presence_of :value }
     it { should validate_presence_of :date }
   end

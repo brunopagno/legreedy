@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 20131026115700) do
 
   create_table "transactions", force: true do |t|
     t.integer  "user_id"
-    t.integer  "type"
+    t.integer  "way"
     t.decimal  "value",       precision: 8, scale: 2
     t.date     "date"
     t.string   "description"

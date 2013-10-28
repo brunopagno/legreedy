@@ -1,0 +1,17 @@
+.container.wallet
+  h3 Minha carteira
+  .new
+    = render 'transactions/form'
+  hr
+  .row
+    .col-xs-10
+      .last-few
+        p.lead Últimas transações
+        - current_user.transactions.each do |transaction|
+          = render partial: 'transactions/one', locals: { transaction: transaction }
+    .col-xs-2
+      .months.pull-right
+        p = link_to 'Jul', wallet_path
+        p = link_to 'Ago', wallet_path
+        p = link_to 'Set', wallet_path
+        p = link_to 'Out', wallet_path

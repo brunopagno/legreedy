@@ -1,0 +1,5 @@
+pt-BR:
+  enumerations:
+    transaction_way:
+      in: entrada
+      out: saída

@@ -6,7 +6,7 @@ pt-BR:
         other: Transações
     attributes:
       transaction:
-        type: Tipo
+        way: Tipo
         value: Valor
         date: Data
         description: Descrição
