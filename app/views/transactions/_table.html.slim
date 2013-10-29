@@ -1,0 +1,16 @@
+- items.each do |date, transactions|
+  p.lead = l date, format: :day_and_month
+  table.table.table-hover
+    thead
+      tr
+        td Tipo 
+        td Descrição
+        td Categoria
+        td Valor
+    tbody
+      - transactions.each do |transaction|
+        tr
+          td = transaction.way_humanize
+          td = transaction.description
+          td = transaction.category
+          td = transaction.value
