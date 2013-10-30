@@ -20,7 +20,7 @@ end
 
 gem 'devise', '~> 3.1.1'
 gem 'slim-rails', '~> 2.0.3'
-gem 'bootstrap-sass-rails', '~> 3.0.0.3'
+gem 'bootstrap-sass', '~> 2.3.2.2'
 gem 'simple_form', '~> 3.0.0'
 gem 'inherited_resources'
 gem 'enumerate_it'

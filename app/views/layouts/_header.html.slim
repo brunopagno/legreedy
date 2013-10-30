@@ -2,7 +2,5 @@ header
   .container
     h2.pull-left = link_to 'LeGreedy', root_path
     .header-top-items.pull-right
-      - unless user_signed_in?
-        = link_to 'login', new_user_session_path
-      - else
+      - if user_signed_in?
         = link_to 'logout', destroy_session_path(current_user), method: :delete
