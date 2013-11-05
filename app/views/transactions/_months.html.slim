@@ -1,0 +1,4 @@
+.months
+  h4 Mensal
+  - current_user.months.each do |date|
+    p = link_to l(date, format: :month), month_path(date.year, date.month)

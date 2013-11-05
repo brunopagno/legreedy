@@ -1,16 +1,11 @@
 .container.wallet
-  h2 Minha carteira
-  .new
-    = render 'transactions/form'
-  hr
   .row
-    .col-xs-10
+    .span10
       .last-few
-        h3 Últimas transações
+        p.lead Últimas transações
         = render partial: 'transactions/table', locals: { items: @last_few }
-    .col-xs-2
-      .months.pull-right
-        p = link_to 'Jul', wallet_path
-        p = link_to 'Ago', wallet_path
-        p = link_to 'Set', wallet_path
-        p = link_to 'Out', wallet_path
+    .span2
+      .pull-right
+        = render 'transactions/new_modal'
+      .pull-right
+        = render 'transactions/months'

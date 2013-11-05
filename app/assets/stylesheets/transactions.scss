@@ -1,0 +1,36 @@
+.transactions {
+  .in {
+    background: rgb(63, 179, 153);
+    color: #fff;
+  }
+  .out {
+    background: rgb(179, 63, 153);
+    color: #fff;
+  }
+  
+  .type {
+    width: 80px;
+  }
+  .value {
+    width: 80px;
+  }
+  thead {
+    font-weight: bold;
+  }
+  
+  .box {
+    margin-bottom: 56px;
+  }
+}
+
+.months {
+  margin-top: 24px;
+  text-align: right;
+
+  p {
+    border: 1px solid #ddd;
+    border-right: none;
+    border-left: none;
+    padding: 8px 0;
+  }
+}

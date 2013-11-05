@@ -1,17 +1,11 @@
-.transactions
-  = simple_form_for Transaction.new, html: { class: 'form-horizontal transaction_form' } do |f|
-    .form-inputs
-      .form-group
-        = f.label :way, class: 'col-xs-4'
-        = f.select :way, TransactionWay.to_a, class: 'col-xs-8'
-      .form-group
-        = f.input :value, label_html: { class: 'col-xs-4' }, input_html: { class: 'col-xs-8' }
-      .form-group
-        = f.input :date, label_html: { class: 'col-xs-4' }
-      .form-group
-        = f.input :description, label_html: { class: 'col-xs-4' }, input_html: { class: 'col-xs-8' }
-      .form-group
-        = f.input :category, label_html: { class: 'col-xs-4' }, input_html: { class: 'col-xs-8' }
+.transactions.new
+  = simple_form_for @transaction, html: { class: 'form-horizontal transaction_form' } do |f|
+    = f.error_notification
 
-    .form-actions
-      = f.submit 'Adicionar', class: 'btn btn-small btn-info'
+    .form-inputs
+      = f.input :way, as: :radio_buttons, collection: TransactionWay.to_a, include_blank: false, class: 'way-select'
+      = f.input :value
+      = f.input :date
+      = f.input :description
+
+    = f.submit 'Adicionar', class: 'btn btn-large btn-success'

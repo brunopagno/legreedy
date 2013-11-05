@@ -1,0 +1,15 @@
+.container.month
+  .row
+    .span10
+      p ------
+      p uma hora dessas vão surgir algumas estatísticas legais aqui
+      p ------
+      hr
+      .last-few
+        p.lead = "Transações do mês de #{l @transactions.first.first, format: :month}"
+        = render partial: 'transactions/table', locals: { items: @transactions }
+    .span2
+      .pull-right
+        = render 'transactions/new_modal'
+      .pull-right
+        = render 'transactions/months'

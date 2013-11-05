@@ -9,7 +9,6 @@
       = f.input :password, required: true
       = f.input :password_confirmation, required: true
 
-    .form-actions
-      = f.submit "Entrar"
+    = f.submit "Entrar", class: 'btn btn-large btn-success'
 
   = link_to 'voltar', :back

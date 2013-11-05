@@ -1,6 +1,6 @@
 .container
   h3 Editar sua conta
-  = simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f|
+  = simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put, class: 'form-horizontal' }) do |f|
     = f.error_notification
 
     .form-inputs
@@ -12,7 +12,8 @@
       br
       = f.input :current_password, hint: 'Insira sua senha atual para confirmar as alterações', required: true
 
-    .form-actions
-      = f.submit "Atualizar"
+    = f.submit "Atualizar", class: 'btn btn-large btn-success'
 
+  hr
+  h4 Cancelar
   = link_to "Cancelar minha conta", registration_path(resource_name), :data => { :confirm => "Você tem certeza?" }, :method => :delete

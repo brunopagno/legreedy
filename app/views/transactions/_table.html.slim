@@ -1,16 +1,17 @@
-- items.each do |date, transactions|
-  p.lead = l date, format: :day_and_month
-  table.table.table-hover
-    thead
-      tr
-        td Tipo 
-        td Descrição
-        td Categoria
-        td Valor
-    tbody
-      - transactions.each do |transaction|
-        tr
-          td = transaction.way_humanize
-          td = transaction.description
-          td = transaction.category
-          td = transaction.value
+.transactions
+  - items.each do |date, transactions|
+    .box
+      p
+        strong = l date, format: :day_and_month
+      table.table.table-hover
+        thead
+          tr
+            td.type Tipo 
+            td Descrição
+            td.value Valor
+        tbody
+          - transactions.each do |transaction|
+            tr
+              td = image_tag transaction.way_in? ? 'in.png' : 'out.png'
+              td = transaction.description
+              td = number_to_currency(transaction.value)
