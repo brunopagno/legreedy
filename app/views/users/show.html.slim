@@ -4,10 +4,11 @@
       - if @transactions.any?
         .stats
           p.lead Estatísticas
-          / = render partial: 'transactions/stats', locals: { items: @stats }
+          = render partial: 'transactions/stats', locals: { items: @stats }
+          .little-margin
         .last-few
           p.lead Últimas transações
-          = render partial: 'transactions/table', locals: { items: @transactions }
+          = render partial: 'transactions/table', locals: { items: @grouped_transactions }
       - else
         .alert.alert-info
           = "Não existem transações ainda. "

@@ -1,0 +1,11 @@
+.transactions.new
+  = simple_form_for @transaction, html: { class: 'form-horizontal transaction_form' } do |f|
+    = f.error_notification
+
+    .form-inputs
+      = f.input :way, as: :radio_buttons, collection: TransactionWay.to_a, include_blank: false, class: 'way-select'
+      = f.input :value
+      = f.input :date
+      = f.input :description
+
+    = f.submit 'Adicionar', class: 'btn btn-large btn-success'
