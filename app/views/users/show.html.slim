@@ -1,11 +1,20 @@
 .container.wallet
   .row
     .span10
-      .last-few
-        p.lead Últimas transações
-        = render partial: 'transactions/table', locals: { items: @last_few }
+      - if @transactions.any?
+        .stats
+          p.lead Estatísticas
+          / = render partial: 'transactions/stats', locals: { items: @stats }
+        .last-few
+          p.lead Últimas transações
+          = render partial: 'transactions/table', locals: { items: @transactions }
+      - else
+        .alert.alert-info
+          = "Não existem transações ainda. "
+          = link_to 'Cadastre!', new_transaction_path
     .span2
       .pull-right
         = render 'transactions/new_modal'
       .pull-right
-        = render 'transactions/months'
+        - if current_user.months.any?
+          = render 'transactions/months'
