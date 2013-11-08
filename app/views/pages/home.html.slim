@@ -1,9 +1,23 @@
-.container
-  .row
-    .span8
-      p Lorem ipsum here
-      = link_to 'Experimente o LeGreedy', new_user_registration_path, class: 'btn btn-large btn-success'
-    .span4
-      h4 Login
-      .little-margin
-      = render partial: 'login_form'
+.dino-stripe
+  .container
+    .row.stripe-content
+      .span7
+        h1 Gerencie seu dinheiro
+        p.lead Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin non cursus sem. Curabitur pharetra nisi quis mi feugiat bibendum. Sed non egestas neque.
+        = link_to 'Experimente o LeGreedy', new_user_registration_path, class: 'btn btn-large btn-success'
+      .span5
+        h4 Login
+        .little-margin
+        = render partial: 'login_form'
+.bronze-stripe
+  .container
+    .row.stripe-content.center
+      .span4
+        h1 Controle
+        p.lead Você controla tudo o que gasta e recebe de forma simples e fácil.
+      .span4
+        h1 Estatística
+        p.lead O LeGreedy calcula informações relevantes de controle de caixa para você.
+      .span4
+        h1 Privacidade
+        p.lead Acesso seguro e privado. Ninguém terá acesso a suas informações

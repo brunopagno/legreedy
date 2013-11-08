@@ -1,6 +1,6 @@
 header
   .container
-    h2.pull-left = link_to 'LeGreedy', root_path
+    .pull-left.logo = link_to (image_tag 'logo.png'), root_path
     .header-top-items.pull-right
       - if user_signed_in?
         = link_to 'meus dados', edit_registration_path(current_user)
