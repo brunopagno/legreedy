@@ -1,6 +1,4 @@
 class TransactionsController < InheritedResources::Base
-  actions :new, :create, :update, :destroy
-
   before_action :authenticate_user!
 
   def create

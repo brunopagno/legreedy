@@ -3,7 +3,7 @@ Legreedy::Application.routes.draw do
 
   get 'wallet(/:year/:month)' => 'users#show', as: 'wallet'
 
-  resources 'transactions', only: [:new, :create, :update, :destroy]
+  resources 'transactions'
 
   devise_for :users
 end

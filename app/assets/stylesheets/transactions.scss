@@ -7,19 +7,17 @@
     background: rgb(179, 63, 153);
     color: #fff;
   }
-  
-  .type {
-    width: 80px;
-  }
-  .value {
-    width: 80px;
-  }
-  thead {
+
+  .table-header {
     font-weight: bold;
   }
   
   .box {
     margin-bottom: 56px;
+  }
+  
+  hr {
+    margin: 6px 0;
   }
 }
 
