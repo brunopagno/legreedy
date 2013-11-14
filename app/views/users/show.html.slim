@@ -3,11 +3,10 @@
     .span10
       - if @transactions.any?
         .stats
-          p.lead Estatísticas
           = render partial: 'transactions/stats', locals: { items: @stats }
           .little-margin
         .last-few
-          p.lead Últimas transações
+          p.lead = "Transações de #{l(@date, format: :month)}"
           = render partial: 'transactions/table', locals: { items: @grouped_transactions }
       - else
         .alert.alert-info
