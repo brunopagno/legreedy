@@ -32,3 +32,20 @@
     padding: 8px 0;
   }
 }
+
+.balance {
+  width: 100px;
+  height: 40px;
+
+  #stats-balance-in {
+    float: left;
+    background: #faf;
+    height: 35px;
+  }
+  
+  #stats-balance-out {
+    float:right;
+    background: #aff;
+    height: 35px;
+  }
+}
