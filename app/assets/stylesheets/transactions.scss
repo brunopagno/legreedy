@@ -35,15 +35,16 @@
 
 .balance {
   width: 100%;
-  height: 30px;
+  height: 46px;
 
   .stats-balance {
-    height: 24px;
+    height: 42px;
     box-shadow: 2px 2px 8px #666;
     -moz-box-shadow: 2px 2px 8px #666;
     -webkit-box-shadow: 2px 2px 8px #666;
     
     p {
+      line-height: 40px;
       color: white;
       padding: 1px 6px;
     }

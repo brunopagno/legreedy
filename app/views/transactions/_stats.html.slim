@@ -1,8 +1,8 @@
 .balance
   #stats-balance-in.stats-balance data-value="#{items[:total_in]}"
-    p = number_to_currency(items[:total_in])
+    p.lead = number_to_currency(items[:total_in])
   #stats-balance-out.stats-balance data-value="#{items[:total_out]}"
-    p = number_to_currency(items[:total_out])
+    p.lead = number_to_currency(items[:total_out])
 .sums
   p.lead.pull-right class=(items[:balance] > 0 ? 'positive' : 'negative')
     = "Saldo: "
