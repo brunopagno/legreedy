@@ -12,6 +12,6 @@ class User < ActiveRecord::Base
   end
 
   def months
-    transactions.map(&:date).uniq(&:month)
+    transactions.map(&:date).uniq(&:month).sort.reverse
   end
 end

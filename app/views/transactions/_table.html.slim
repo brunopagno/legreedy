@@ -3,9 +3,9 @@
     .table-header
       .span1
         p Tipo
-      .span7
+      .span6
         p Descrição
-      .span1
+      .span2
         p Valor
       .span1
         p Ações
@@ -14,14 +14,13 @@
     - items.each do |date, transactions|
       .box
         .span12
-          p
-            strong = l date, format: :day_and_month
+          p = l date, format: :day_and_month
         - transactions.each do |transaction|
           .span1
             p = image_tag transaction.way_in? ? 'in.png' : 'out.png'
-          .span7
+          .span6
             p = transaction.description
-          .span1
+          .span2
             p = number_to_currency(transaction.value)
           .span1
             p

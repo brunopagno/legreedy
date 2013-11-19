@@ -3,18 +3,21 @@
     .span10
       - if @transactions.any?
         .stats
+          p.lead Estatísticas
           = render partial: 'transactions/stats', locals: { items: @stats }
           .little-margin
         .last-few
-          p.lead = "Transações de #{l(@date, format: :month)}"
+          .row
+            .span10
+              p.lead.pull-left = "Transações de #{l(@date, format: :month)}"
+              .pull-right
+                = render 'transactions/new_modal'
           = render partial: 'transactions/table', locals: { items: @grouped_transactions }
       - else
         .alert.alert-info
           = "Não existem transações ainda. "
           = link_to 'Cadastre!', new_transaction_path
     .span2
-      .pull-right
-        = render 'transactions/new_modal'
       .pull-right
         - if current_user.months.any?
           = render 'transactions/months'

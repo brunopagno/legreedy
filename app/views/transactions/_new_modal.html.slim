@@ -1,5 +1,5 @@
 .new
-  = link_to 'Nova transação', '#new-transaction', data: { toggle: 'modal' }, class: 'btn btn-large btn-success'
+  = link_to 'Nova transação', '#new-transaction', data: { toggle: 'modal' }, class: 'btn btn-success'
   #new-transaction.modal.hide.fade tabindex="-1" role="dialog" aria-hidden="true"
     = simple_form_for Transaction.new, html: { class: 'form-horizontal transaction_form' } do |f|
       .modal-header

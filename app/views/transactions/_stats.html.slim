@@ -1,11 +1,10 @@
-- items.each do |key, value|
-  .row
-    .span1
-      p = "#{key}"
-    .span1
-      p = "=>"
-    .span1
-      p = "#{value}"
 .balance
-  #stats-balance-in data-value="#{items[:total_in]}"
-  #stats-balance-out data-value="#{items[:total_out]}"
+  #stats-balance-in.stats-balance data-value="#{items[:total_in]}"
+    p = number_to_currency(items[:total_in])
+  #stats-balance-out.stats-balance data-value="#{items[:total_out]}"
+    p = number_to_currency(items[:total_out])
+.sums
+  p.lead.pull-right class=(items[:balance] > 0 ? 'positive' : 'negative')
+    = "Saldo: "
+    = number_to_currency(items[:balance])
+.clear
