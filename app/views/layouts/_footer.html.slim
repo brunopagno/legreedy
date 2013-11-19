@@ -3,9 +3,16 @@ footer
     p.pull-left
       = 'LeGreedy'
       = ' | '
-      = 'sobre o projeto'
-      = ' | '
-      = 'termos de uso'
+      = link_to 'sobre o projeto', '#about-legreedy', data: { toggle: 'modal' }
     p.pull-right
       = 'Desenvolvido por Lunaria'
-    
+
+
+#about-legreedy.modal.hide.fade tabindex="-1" role="dialog" aria-hidden="true"
+  .modal-header
+    = button_tag 'x', type: 'button', data: { dismiss: 'modal' }, :'aria-hidden' => true, class: 'close'
+    h3 Sobre o Legreedy
+  .modal-body
+    p O LeGreedy é um projeto criado com o intuito de organizar gastos e recebimentos do dia a dia. Foi idealizado e construído baseado numa necessidade pessoal, apenas para o próprio controle de gastos. O projeto encontra-se em fase inicial e, portanto está na forma mais simplificada possível.
+  .modal-footer
+    = button_tag 'Fechar', type: 'button', data: { dismiss: 'modal' }, :'aria-hidden' => true, class: 'btn btn-link'
