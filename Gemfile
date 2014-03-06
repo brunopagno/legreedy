@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 
-ruby '2.0.0'
+ruby '2.1.0'
 
-gem 'rails', '4.0.0'
+gem 'rails', '4.0.3'
 gem 'pg', '~> 0.17.0'
 gem 'thin', '~> 1.6.0'
 
@@ -20,8 +20,7 @@ end
 
 gem 'devise', '~> 3.1.1'
 gem 'slim-rails', '~> 2.0.3'
-gem 'bootstrap-sass', '~> 2.3.2.2'
-gem 'simple_form', '~> 3.0.0'
+gem 'bootstrap-sass', '~> 3.1.0.0'
 gem 'inherited_resources'
 gem 'enumerate_it'
 

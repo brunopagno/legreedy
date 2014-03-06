@@ -1,12 +1,13 @@
 .dino-stripe {
-  background: asset-url('dino-stripe.png') repeat-x;
+  background: asset-url('dino-stripe.jpg') repeat;
   margin-top: -24px;
-  height: 325px;
+  padding-bottom: 32px;
 }
 
 .bronze-stripe {
   background: #eee;
-  height: 315px;
+  padding-bottom: 32px;
+  min-height: 320px;
 }
 
 .stripe-content {

@@ -1,8 +1,18 @@
-= simple_form_for User.new, url: new_user_session_path, html: { class: 'home-login form-horizontal' } do |f|
-  .form-inputs
-    = f.input :email, required: false, autofocus: true
-    = f.input :password, required: false
-    = f.input :remember_me, as: :boolean, label_html: { class: 'minus-margin-label' }
+= form_for User.new, url: new_user_session_path, html: { class: 'form-horizontal' } do |f|
+  .form-group
+    = f.label :email, class: 'col-lg-2 col-md-2 control-label'
+    .col-lg-6.col-md-8
+      = f.email_field :email, autofocus: true
+  .form-group
+    = f.label :password, class: 'col-lg-2 col-md-2 control-label'
+    .col-lg-6.col-md-8
+      = f.password_field :password, required: false
+  .form-group
+    = f.label :remember_me, class: 'col-lg-3 col-md-3 control-label'
+    .col-lg-2.col-md-2.remember-me
+      = f.check_box :remember_me
 
-  .pull-right.btn-enter
-    = f.submit "Entrar", class: 'btn btn-success'
+  .form-group
+    .col-lg-offset-5.col-md-offset-5.col-sm-offset-5.col-xs-offset-5
+      .btn-enter
+        = f.submit "Entrar", class: 'btn btn-success'

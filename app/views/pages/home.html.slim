@@ -1,23 +1,27 @@
 .dino-stripe
   .container
-    .row.stripe-content
-      .span7
+    .stripe-content
+      .col-lg-7.col-md-7.col-sm-7.col-xs-12
         h1 Gerencie seu dinheiro
-        p.lead Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin non cursus sem. Curabitur pharetra nisi quis mi feugiat bibendum. Sed non egestas neque.
-        = link_to 'Experimente o LeGreedy', new_user_registration_path, class: 'btn btn-large btn-success'
-      .span5
-        h4 Login
+        p.lead
+          | Precisando controlar seu dinheiro?
+          br
+          | Comece aqui e explore todos os benefícios que o LeGreedy pode fazer por você e suas finaças.
+        = link_to 'Experimente o LeGreedy', new_user_registration_path, class: 'btn btn-lg btn-success'
+      .col-lg-5.col-md-5.col-sm-5.col-xs-12
+        h3 Login
         .little-margin
         = render partial: 'login_form'
+    .clear
 .bronze-stripe
   .container
     .row.stripe-content.center
-      .span4
+      .col-lg-4.col-md-4.col-sm-4
         h1 Controle
         p.lead Você controla tudo o que gasta e recebe de forma simples e fácil.
-      .span4
+      .col-lg-4.col-md-4.col-sm-4
         h1 Estatística
         p.lead O LeGreedy calcula informações relevantes de controle de caixa para você.
-      .span4
+      .col-lg-4.col-md-4.col-sm-4
         h1 Privacidade
         p.lead Acesso seguro e privado. Ninguém terá acesso a suas informações
