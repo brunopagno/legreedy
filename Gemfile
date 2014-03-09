@@ -23,6 +23,7 @@ gem 'slim-rails', '~> 2.0.3'
 gem 'bootstrap-sass', '~> 3.1.0.0'
 gem 'inherited_resources'
 gem 'enumerate_it'
+gem 'simple_form'
 
 group :development do
   gem 'letter_opener', '~> 1.1.2'
