@@ -21,6 +21,7 @@ end
 gem 'devise', '~> 3.1.1'
 gem 'slim-rails', '~> 2.0.3'
 gem 'bootstrap-sass', '~> 3.1.0.0'
+gem 'font-awesome-sass'
 gem 'inherited_resources'
 gem 'enumerate_it'
 gem 'simple_form'
