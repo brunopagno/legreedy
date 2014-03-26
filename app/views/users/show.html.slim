@@ -3,13 +3,14 @@
     .col-lg-10.col-md-10.col-sm-10
       - if @transactions.any?
         .stats
-          p.lead Estatísticas
+          p.lead Resumo do mês
           = render partial: 'transactions/stats', locals: { items: @stats }
           .little-margin
+        .actions
+          .pull-right = link_to 'Adicionar nova transação', new_transaction_path, class: 'btn btn-success'
         .last-few
-          .row
-            .span10
-              p.lead.pull-left = "Transações de #{l(@date, format: :month)}"
+          p.lead.pull-left = "Transações de #{l(@date, format: :month)}"
+          .clear
           = render partial: 'transactions/table', locals: { items: @grouped_transactions }
       - else
         .alert.alert-info

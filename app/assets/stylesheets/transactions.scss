@@ -1,11 +1,11 @@
 .transactions {
   .in {
-    background: rgb(63, 179, 153);
-    color: #fff;
+    background: #7dc0e0;
+    color: 004462;
   }
   .out {
-    background: rgb(179, 63, 153);
-    color: #fff;
+    background: #f59494;
+    color: #711a1a;
   }
 
   .table-header {
@@ -26,7 +26,7 @@
   text-align: right;
 
   p {
-    border: 1px solid #ddd;
+    border: 1px solid #ccc;
     border-right: none;
     border-left: none;
     padding: 8px 0;
@@ -39,36 +39,34 @@
 
   .stats-balance {
     height: 42px;
-    box-shadow: 2px 2px 8px #666;
-    -moz-box-shadow: 2px 2px 8px #666;
-    -webkit-box-shadow: 2px 2px 8px #666;
     
     p {
       line-height: 40px;
-      color: white;
       padding: 1px 6px;
     }
   }
 
   #stats-balance-in {
+    width: 100%;
     float: left;
-    background: asset-url("stats_in.png") repeat-x;
+    background: #7dc0e0;
+    p {
+      color: 004462;
+    }
   }
 
   #stats-balance-out {
-    float:right;
-    background: asset-url("stats_out.png") repeat-x;
+    position: absolute;
+    width: 33%;
+    right: 12px;
+    background: #f59494;
     p {
+      color: #711a1a;
       text-align: right;
     }
   }
 }
 
 .sums {
-  .positive {
-    color: rgb(61, 172, 95);
-  }
-  .negative {
-    color: rgb(191, 120, 66);
-  }
+  color: #4f4f4f;
 }
