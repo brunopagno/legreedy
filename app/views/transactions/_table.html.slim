@@ -2,11 +2,11 @@
   .table-header
     .col-lg-1.col-md-1.col-sm-1
       p Tipo
-    .col-lg-6.col-md-6.col-sm-6
+    .col-lg-7.col-md-7.col-sm-7
       p Descrição
     .col-lg-2.col-md-2.col-sm-2
       p Valor
-    .col-lg-1.col-md-1.col-sm-1
+    .col-lg-2.col-md-2.col-sm-2
       p Ações
   .clear
   hr
@@ -17,11 +17,11 @@
       - transactions.each do |transaction|
         .col-lg-1.col-md-1.col-sm-1
           p = transaction.way_in? ? icon('arrow-right') : icon('arrow-left')
-        .col-lg-6.col-md-6.col-sm-6
+        .col-lg-7.col-md-7.col-sm-7
           p = transaction.description
         .col-lg-2.col-md-2.col-sm-2
           p = number_to_currency(transaction.value)
-        .col-lg-1.col-md-1.col-sm-1
+        .col-lg-2.col-md-2.col-sm-2
           p
             = link_to icon('edit'), edit_transaction_path(transaction)
             = ' '
