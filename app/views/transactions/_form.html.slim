@@ -6,6 +6,6 @@
       = f.input :way, as: :radio_buttons, collection: TransactionWay.to_a, include_blank: false, class: 'way-select'
       = f.input :value
       = f.input :date
-      = f.input :description, as: :text
+      = f.input :description
 
     = f.submit class: 'btn btn-large btn-success'
